@@ -54,7 +54,7 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 "kite
 "let g:kite_supported_languages = ['python', 'javascript', 'css', 'html', 'javascriptreact']
-let g:kite_supported_languages = ['python', 'css', 'javascript']
+let g:kite_supported_languages = ['python', 'css', 'javascript' ]
 "let g:kite_supported_languages = ['python']
 
 
@@ -64,6 +64,10 @@ autocmd Filetype css let b:coc_suggest_disable = 0
 autocmd Filetype scss setl iskeyword+=@-@
 autocmd Filetype javascript let b:coc_suggest_disable = 0
 "autocmd Filetype html let b:coc_suggest_disable = 1
+ 
+"esto para auto compile el sass
+autocmd bufwritepost [^_]*.sass,[^_]*.scss  silent exec "!sass %:p %:r.css"
+"esto para auto compile el sass
 
 " deoplete
 let g:deoplete#enable_at_startup = 1

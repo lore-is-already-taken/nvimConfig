@@ -11,9 +11,9 @@ set showmatch
 set termguicolors
 set sw=2
 set relativenumber
-so /home/lore/.config/nvim/plugins.vim
-so /home/lore/.config/nvim/plugin-config.vim
-so /home/lore/.config/nvim/maps.vim
+so /home/ivn/.config/nvim/plugins.vim
+so /home/ivn/.config/nvim/plugin-config.vim
+so /home/ivn/.config/nvim/maps.vim
 
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
@@ -22,6 +22,8 @@ set laststatus=2
 set noshowmode
 
 "au BufNewFile,BufRead *.html set filetype=htmldjango
+au BufNewFile,BufRead *.scss set filetype=css
+
 
 "" Searching
 set hlsearch                    " highlight matches
